@@ -7,13 +7,12 @@
 //con difficoltà 3 => tra 1 e 49
 //Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurra
 
-function display() {
-    const button = document.getElementById('run');
-    button.addEventListener('click', function() {
-        this.classList.toggle('.box');
-    })
+
+const button = document.querySelector('run');
+button.addEventListener('click', function() {
+    outputHtml.innerHTML += 'hello';
+})
     
-}
 
 function createNewBox(container) {
     const newBox = document.createElement('div');
@@ -26,7 +25,7 @@ function createNewBox(container) {
 }
 
 
-const button = document.getElementById('run');
+
 const boxingHtml = document.querySelector(`.boxing`);
 
 
