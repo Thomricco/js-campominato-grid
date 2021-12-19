@@ -8,17 +8,52 @@
 //Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurra
 
 
-const button = document.querySelector('run');
-button.addEventListener('click', function() {
-    outputHtml.innerHTML += 'hello';
+
+const boxingHtml = document.querySelector('.boxing');
+const buttonOne = document.querySelector('.button.box1');
+
+buttonOne.addEventListener('click', function() {
+    for (let i = 1; i <= 100; i++) {
+        createNewBox(boxingHtml);
+    }
 })
-    
+
+const buttonTwo = document.querySelector('.button.box2');
+
+buttonTwo.addEventListener('click', function() {
+    for (let i = 1; i <= 81; i++) {
+        createNewBox(boxingHtml);
+    }
+})
+
+const buttonThree = document.querySelector('.button.box3');
+
+buttonThree.addEventListener('click', function() {
+    for (let i = 1; i <= 49; i++) {
+        createNewBox(boxingHtml);
+    }
+})
+
 
 function createNewBox(container) {
     const newBox = document.createElement('div');
     newBox.className = 'box';
     container.append(newBox);
+    
+    newBox.addEventListener('click', function() {
+        this.classList.toggle('blu');
+    })
+}
 
+
+
+
+
+/*function createNewBox(container) {
+    const newBox = document.createElement('div');
+    newBox.className = 'box';
+    container.append(newBox);
+    
     newBox.addEventListener('click', function() {
         this.classList.toggle('green');
     })
@@ -26,9 +61,8 @@ function createNewBox(container) {
 
 
 
-const boxingHtml = document.querySelector(`.boxing`);
 
 
 for (let i = 1; i <= 100; i++) {
     createNewBox(boxingHtml);
-} 
+} */
