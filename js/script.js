@@ -44,25 +44,3 @@ function createNewBox(container) {
         this.classList.toggle('blu');
     })
 }
-
-
-
-
-
-/*function createNewBox(container) {
-    const newBox = document.createElement('div');
-    newBox.className = 'box';
-    container.append(newBox);
-    
-    newBox.addEventListener('click', function() {
-        this.classList.toggle('green');
-    })
-}
-
-
-
-
-
-for (let i = 1; i <= 100; i++) {
-    createNewBox(boxingHtml);
-} */
